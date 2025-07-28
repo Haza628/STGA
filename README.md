@@ -1,5 +1,5 @@
 # Selective-Training Gaussian Head Avatars: Enhancing Detail and Efficiency in Dynamic 3D Reconstruction (STGA)
-
+**Note:** This repository is a preliminary release prepared only for paper review. It is not the final version and may be updated after the paper is accepted and officially published.
 
 ## [Paper](https://arxiv.org/abs/2503.05196)
 
@@ -73,6 +73,8 @@ If you find our code or paper helps, please consider citing:
 }
 ```
 And thanks to the authors of [3DGS](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/) and [GaussianAvatars](https://github.com/ShenhanQian/GaussianAvatars/) for their excellent code!
+
+
 
 
 
