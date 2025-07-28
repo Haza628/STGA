@@ -18,8 +18,8 @@ git clone https://github.com/yourusername/STGA.git
 cd STGA
 
 # Create env
-conda create -n dg-mesh python=3.9
-conda activate dg-mesh
+conda create -n STGA python=3.9
+conda activate STGA
 conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
 
 # Install submodules
@@ -34,18 +34,45 @@ pip install -r requirements.txt
 
 # dataset
 
-We use the Gaussianavatars dataset for training. You can download it from [here](https://github.com/ShenhanQian/GaussianAvatars).
-
+We use the Gaussianavatars dataset for training. You can download it from [here](https://github.com/ShenhanQian/GaussianAvatars/blob/main/doc/download.md). We conducted further processing based on the GaussianAvatars dataset. The structure of this dataset is as follows:
+```
+data_folder/
+├── meshes/   # FLAME mesh
+│   ├── mesh_0000.json
+│   ├── mesh_0001.json
+│   └── ...
+├── training_faces/ # Each triangular face involved in the training process
+│   ├── 0000.npy
+│   ├── 0001.npy
+│   └── ...
+├── images/ # GT
+│   ├── 00000_00.png
+│   ├── 00000_01.png
+│   └── ...
+├── points3d.ply
+├── transforms_test.json
+└── transforms_train.json
+```
 
 
 
 # Usage
 
 ```bash
-python train.py 
+python train.py -s <data_dir>
 ```
 
-
+## Citation
+If you find our code or paper helps, please consider citing:
+```
+@article{guo2025stga,
+  title={STGA: Selective-Training Gaussian Head Avatars},
+  author={Guo, Hanzhi and Chen, Yixiao and Xiaonuo, Dongye and Tian, Zeyu and Weng, Dongdong and Luo, Le},
+  journal={arXiv preprint arXiv:2503.05196},
+  year={2025}
+}
+```
+And thanks to the authors of [3DGS](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/) and [GaussianAvatars](https://github.com/ShenhanQian/GaussianAvatars/) for their excellent code!
 
 
 
