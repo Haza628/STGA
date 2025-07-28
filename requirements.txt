@@ -1,0 +1,12 @@
+tqdm
+numpy==1.22.3
+matplotlib
+scipy
+chumpy
+tensorboard
+fvcore
+iopath
+plyfile
+tyro
+dearpygui
+roma
