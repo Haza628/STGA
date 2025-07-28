@@ -26,10 +26,7 @@ conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvi
 pip install submodules/diff-gaussian-rasterization
 pip install submodules/simple-knn
 
-
 pip install -r requirements.txt
-
-
 ```
 
 # dataset
